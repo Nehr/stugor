@@ -1,6 +1,7 @@
 $white: #fff;
+$gray: #333;
 
-$border--color: rgba(#333, 0.15);
+$border--color: rgba($gray, 0.15);
 $border--shadow: 1px 1px 4px $border--color;
 $text-color: #2c3e50;
 $text-color--active: #42b983;
@@ -8,3 +9,5 @@ $text-color--hover: darken(#42b983, 10%);
 
 $grid-max-width: 1320px;
 $header--height: 3.875rem;
+
+$footer--color: $gray;
