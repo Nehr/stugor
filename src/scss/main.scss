@@ -64,6 +64,8 @@ $utilities: map-get-multiple(
 // Bootstrap extras
 @import '~bootstrap/scss/buttons';
 @import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/helpers/visually-hidden';
 
 // Custom css
 @import 'general/core';

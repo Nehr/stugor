@@ -6,8 +6,8 @@
       </div>
       <div class="nav__inner--right">
         <router-link to="/about">Info</router-link>
-        <router-link to="/user">Användare</router-link>
-        <router-link to="/admin">Administratör</router-link>
+        <router-link to="/user">Stugor</router-link>
+        <router-link to="/admin">Admin</router-link>
       </div>
     </div>
   </nav>

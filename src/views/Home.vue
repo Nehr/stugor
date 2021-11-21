@@ -59,7 +59,8 @@ export default {
     &--btn {
       display: block;
       text-transform: uppercase;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
+      font-weight: 700;
       letter-spacing: 1px;
       width: 100%;
       max-width: 14rem;

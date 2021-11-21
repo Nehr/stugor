@@ -30,21 +30,21 @@
 </template>
 
 <script>
-import store from '@/store';
+import { computed } from 'vue';
+import { useStore } from 'vuex';
 
 export default {
   components: {},
   props: {},
   setup() {
-    const bookedHouses = store.getters.bookedHouses;
-    console.log(bookedHouses);
-    const houses = store.getters.houses;
-    console.log(houses);
+    const store = useStore();
+    const houses = computed(() => store.getters.houses);
+    const bookedHouses = computed(() => store.getters.bookedHouses);
 
     const houseImage = (id) => require(`../assets/houses/cabin-${id}.jpg`);
 
     const isHouseBooked = (id) => {
-      return bookedHouses.includes(id);
+      return bookedHouses.value.includes(id);
     };
 
     return {

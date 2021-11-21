@@ -38,14 +38,20 @@ export const houses = {
     housesBooked: [1, 4],
   }),
 
-  actions: {
-    // eslint-disable-next-line no-unused-vars
-    bookHouse: (data, { commit, state }) => {
-      console.log('booking house', data);
+  actions: {},
+
+  mutations: {
+    bookHouse(state, data) {
+      state.housesBooked.push(data);
+      console.log('logging state housesBooked', state.housesBooked);
+    },
+    removeHouseBooking(state, data) {
+      console.log('data', data);
+      const index = state.housesBooked.indexOf(data);
+      state.housesBooked.splice(index, 1);
+      console.log(state.housesBooked);
     },
   },
-
-  mutations: {},
 
   getters: {
     houses: (state) => state.houses,
