@@ -8,13 +8,14 @@
           <h2>Teknikval</h2>
           <p>
             Jag har valt VueJS för att göra detta. Mycket för att det är ett
-            mycket roligt ramverk att koda i, samt för att jag kände att det var
-            ett perfekt ramverk för denna uppgift.
+            roligt ramverk att koda i samt för att jag kände att det var ett
+            perfekt ramverk för denna uppgift.
           </p>
           <h2>Lagring</h2>
           <p>
             Värden lagras endast i applikationens lokala state, så om man laddar
-            om sidan kommer allting att återställas till ursprungsvärdena.
+            om sidan/webappen kommer allting att återställas till
+            ursprungsvärdena.
           </p>
           <h2>Skiss / Mockup</h2>
           <p>

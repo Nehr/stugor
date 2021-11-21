@@ -4,30 +4,28 @@
   <div class="house page-content">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <h1>{{ name }}</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
+        <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
           <img :src="image(id)" />
-          <p class="desc">
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 house--text">
+          <h1>{{ name }}</h1>
+          <p class="desc py-2">
             {{ desc }}
           </p>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-4">
         <div class="col">
           <div class="row mb-3">
             <div class="col-lg-6">
               <div class="row">
                 <label
                   for="nameInput"
-                  class="col-sm-2 visually-hidden col-form-label"
+                  class="col-lg-2 visually-hidden col-form-label"
                 >
                   Namn
                 </label>
-                <div class="col-sm-10">
+                <div class="col-lg-10 offset-lg-2 mb-3 mb-lg-0">
                   <div class="input-group">
                     <span class="input-group-text" id="namePrepend">Namn</span>
                     <input
@@ -47,11 +45,11 @@
               <div class="row">
                 <label
                   for="telInput"
-                  class="col-sm-2 visually-hidden col-form-label"
+                  class="col-lg-2 visually-hidden col-form-label"
                 >
                   Telefon
                 </label>
-                <div class="col-sm-10">
+                <div class="col-lg-10">
                   <div class="input-group">
                     <span class="input-group-text" id="telPrepend">#</span>
                     <input
@@ -77,11 +75,11 @@
               <div class="row">
                 <label
                   for="emailInput"
-                  class="col-sm-2 visually-hidden col-form-label"
+                  class="col-lg-2 visually-hidden col-form-label"
                 >
                   E-post
                 </label>
-                <div class="col-sm-10">
+                <div class="col-lg-10 offset-lg-2">
                   <div class="input-group">
                     <span class="input-group-text" id="emailPrepend">@</span>
                     <input
@@ -99,7 +97,7 @@
             </div>
             <div class="col-lg-6">
               <div class="row">
-                <div class="col-sm-10">
+                <div class="col-lg-10">
                   <button
                     :disabled="isHouseBooked"
                     @click="bookHouse()"
@@ -264,7 +262,11 @@ export default {
 
 <style lang="scss" scoped>
 .house {
+  display: flex;
+  align-items: center;
+  width: 100%;
   min-height: 95vh;
+  padding-bottom: 20vh;
   z-index: 1;
   background-color: $white;
   background-color: rgba($white, 0.75);
@@ -283,6 +285,16 @@ export default {
     z-index: -1;
   }
 
+  &--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
   .input-group-text {
     min-width: 8ch;
     justify-content: center;
@@ -291,14 +303,6 @@ export default {
   .btn {
     display: block;
     width: 100%;
-  }
-
-  > .container {
-    max-width: 50rem;
-  }
-
-  .desc {
-    padding: 1rem 0;
   }
 
   img {
