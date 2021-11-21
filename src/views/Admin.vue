@@ -1,13 +1,13 @@
 <template>
-  <footer>
+  <div class="about page-content">
     <div class="container">
       <div class="row">
         <div class="col">
-          <p>Footer</p>
+          <h1>Administratör</h1>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>
@@ -20,10 +20,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-footer {
-  background-color: $footer--color;
-  padding: 2rem 0;
-  color: $white;
-}
-</style>
+<style lang="scss" scoped></style>

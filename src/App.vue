@@ -25,19 +25,10 @@ export default {
 </script>
 
 <style lang="scss">
-body,
-html {
-  font-size: 16px;
-}
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text-color;
-}
-
-main {
-  padding-top: $header--height;
 }
 </style>

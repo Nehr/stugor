@@ -1,12 +1,13 @@
 <template>
   <nav class="nav">
     <div class="nav__inner">
-      <div class="nav__inner--left">
+      <div class="d-none d-md-block nav__inner--left">
         <router-link to="/">[Stugor Logo]</router-link>
       </div>
       <div class="nav__inner--right">
-        <router-link to="/about">Användare</router-link>
-        <router-link to="/about">Administratör</router-link>
+        <router-link to="/about">Info</router-link>
+        <router-link to="/user">Användare</router-link>
+        <router-link to="/admin">Administratör</router-link>
       </div>
     </div>
   </nav>
@@ -31,15 +32,18 @@ export default {
   position: fixed;
   width: 100%;
   background-color: $white;
+  z-index: 1001;
 
   &__inner {
+    min-height: $header--height;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     max-width: $grid-max-width;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
 
     &--right,
     &--left {
